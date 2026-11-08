@@ -1,0 +1,10 @@
+# Ambiente virtuale Python e file compilati
+venv/
+__pycache__/
+*.pyc
+
+# File con le chiavi API segrete
+.env
+
+# Eventuali cartelle di test future
+workspace/
