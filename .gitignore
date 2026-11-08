@@ -3,7 +3,7 @@ venv/
 __pycache__/
 *.pyc
 
-# File con le chiavi API segrete
+# File con le chiavi API
 .env
 
 # Eventuali cartelle di test future

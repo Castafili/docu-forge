@@ -1,2 +1,5 @@
 python-dotenv
 requests
+wikipedia-api
+google-genai
+pydantic
