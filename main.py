@@ -2,6 +2,7 @@ import argparse
 from src.config import check_config
 from src.state import init_project
 from src.mod1_research import run_research
+from src.mod2_assets import run_assets
 
 def main():
     parser = argparse.ArgumentParser(description="Docu-Forge: Pipeline per Documentari YouTube")
@@ -9,7 +10,7 @@ def main():
     parser.add_argument("--topic", help="Titolo pagina Wikipedia EN (es. 'Emu War')")
     parser.add_argument(
         "--step", 
-        choices=["check", "init", "research"], 
+        choices=["check", "init", "research", "assets"], 
         default="check",
         help="Quale operazione eseguire"
     )
@@ -30,6 +31,12 @@ def main():
             print("[!] Errore: specifica --slug")
             return
         run_research(args.slug)
+
+    elif args.step == "assets":
+        if not args.slug:
+            print("[!] Errore: specifica --slug")
+            return
+        run_assets(args.slug)
 
 if __name__ == "__main__":
     main()

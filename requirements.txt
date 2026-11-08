@@ -3,3 +3,5 @@ requests
 wikipedia-api
 google-genai
 pydantic
+pydub
+audioop-lts
